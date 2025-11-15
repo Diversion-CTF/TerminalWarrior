@@ -25,36 +25,49 @@ A containerized command-line cybersecurity challenge built in Python, simulating
 
 ### 🐧 Run Locally for Linux (Without Docker)
 
-```bash
+
 #### Step 1: Clone the repo
+```bash
 git clone https://github.com/Ban5hee-GH/FileSystem-CTF.git
-
+```
 #### Step 2: Enter the project repo
+```bash
 cd FileSystem-CTF
-
+```
 #### Step 3: Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 #### step 4: Run the CLI Lab
+```bash
 python -m cli_lab.main
-
+```
 ### 🪟 Run Locally for Windows (Withour Docker)
 
 #### Step 1: Clone the repo
+```bash
 git clone https://github.com/Ban5hee-GH/FileSystem-CTF.git
+```
 #### Step 2: Enter the project
+```bash
 cd FileSystem-CTF
-
+```
 #### Step 3: Install dependencies
+```bash
 pip install -r requirements.txt
-
+```
 #### Step 4: Run the CLI Lab
+```bash
 python -m cli_lab.main
-
+```
 
 ### 🐳 Run With Docker (Recommended)
 
 #### Step 1: Build Docker image
+```bash
  docker build -t cli-lab -f docker/Dockerfile .
+```
 #### Step 2: Run the containter interactively
+```bash
  docker run -it cli-lab
+```
