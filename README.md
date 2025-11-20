@@ -32,7 +32,7 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 
 ## Installation & Setup
 
----
+----
 
 ### 🐧 Run Locally for Linux (Without Docker)
 

@@ -1,6 +1,13 @@
 import time
 # Import our shared tools
-from utils import clear_screen, print_header, print_objectives, print_success, generic_cmd_handler, CURRENT_DIR
+from .utils import (
+    clear_screen,
+    print_header,
+    print_objectives,
+    print_success,
+    generic_cmd_handler,
+    CURRENT_DIR
+)
 
 def run_level():
     # Setup Level
@@ -58,3 +65,18 @@ def run_level():
 
         except KeyboardInterrupt:
             return False
+
+def main():
+    """
+    Entry point for TerminalWarrior Windows Level 1
+    """
+    clear_screen()
+    print_header("Windows Level 1 - File System Recon")
+    time.sleep(1)
+
+    # Start the challenge loop
+    result = run_level()
+
+    # After user exits the level
+    return result
+

@@ -1,4 +1,5 @@
 from cli_lab.levels.linux import level1_intro, level2_permissions
+from cli_lab.levels.windows import level1_recon, level2_network
 
 def main():
     while True:
@@ -52,8 +53,8 @@ def linux_menu():
 def windows_menu():
     while True:
      print("\n=== Windows Levels ===")
-     print("1) Level 1 - COMING SOON")
-     print("2) Level 2 - COMING SOON")
+     print("1) Level 1 - Recon")
+     print("2) Level 2 - Network")
      print("3) Level 3 - COMING SOON")
      print("4) Level 4 - COMING SOON")
      print("5) Level 5 - COMING SOON")
@@ -62,9 +63,9 @@ def windows_menu():
      choice = input("Select a level: ").strip()
 
      if choice == "1":
-        print("COMING SOON!")
+        level1_recon.main()
      elif choice == "2":
-        print("COMING SOON!")
+        level2_network.main()
      elif choice == "3":
         print("COMING SOON!")
      elif choice == "4":
