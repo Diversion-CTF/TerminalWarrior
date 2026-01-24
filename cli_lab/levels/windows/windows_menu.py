@@ -16,6 +16,7 @@ import level2_permissions
 import level3_searching
 import level4_networking
 import level5_cryptography
+import level6_registry
 
 def main_menu():
     print_header("THEROOTEXEC CHALLENGE SYSTEM | MAIN CONSOLE")
@@ -32,8 +33,9 @@ def main_menu():
             if level1_recon.run_level():
                  if level2_permissions.run_level(): 
                     if level3_searching.run_level(): 
-                        if level4_networking.run_level():
-                            if level5_cryptography.run_level():
+                     if level4_networking.run_level():
+                        if level5_cryptography.run_level():                                  
+                              if level6_registry.run_level():
                                 clear_screen()
                                 print("\n\n")
                                 print("*" * 50)
@@ -47,5 +49,6 @@ def main_menu():
                      
 if __name__ == "__main__":
     main_menu()                     
+
 
 
