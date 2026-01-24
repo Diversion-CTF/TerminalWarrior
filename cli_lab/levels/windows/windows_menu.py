@@ -22,7 +22,7 @@ def main_menu():
     print_header("THEROOTEXEC CHALLENGE SYSTEM | MAIN CONSOLE")
     print(":: CHALLENGE TRACKS ::")
     print("-" * 35)
-    print(" [1] Start Windows Campaign (Levels 1-5)")
+    print(" [1] Start Windows Campaign (Levels 1-6)")
     print(" [2] Exit System")
     print("-" * 35)
     
@@ -49,6 +49,7 @@ def main_menu():
                      
 if __name__ == "__main__":
     main_menu()                     
+
 
 
 
