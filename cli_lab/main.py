@@ -69,6 +69,7 @@ def windows_menu():
         print("4) Level 4 - Networking")
         print("5) Level 5 - Cryptography")
         print("6) Level 6 - Registry")
+        print("7) Level 7 - Tasks_services")
         print("0) Back\n")
 
         choice = input("Select a level: ").strip()
@@ -85,6 +86,8 @@ def windows_menu():
             level5_cryptography.main()
         elif choice == "6":
             level6_registry.main()
+        elif choice == "7":
+            level7_tasks_services.main()
         elif choice == "0":
             return
         else:
