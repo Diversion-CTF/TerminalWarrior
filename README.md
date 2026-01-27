@@ -43,7 +43,7 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 
 #### Step 1: Clone the repo
 ```bash
-git clone https://github.com/Ban5hee-GH/TerminalWarrior.git
+git clone https://github.com/Diversion-CTF/TerminalWarrior.git
 ```
 #### Step 2: Enter the project repo
 ```bash
@@ -62,7 +62,7 @@ python -m cli_lab.main
 
 #### Step 1: Clone the repo
 ```bash
-git clone https://github.com/Ban5hee-GH/TerminalWarrior.git
+git clone https://github.com/Diversion-CTF/TerminalWarrior.git
 ```
 #### Step 2: Enter the project
 ```bash
