@@ -22,7 +22,7 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 ### 🐧 Linux Terminal Levels:
 - |*1*| Intro Challenge | Explore directories and find hidden files | Basic Linux commands ('ls', 'cat', 'cd', 'pwd', 'whoami') |
 - |*2*| Permissions & Ownership | Learn how to view and modify file permissions | 'chmod', 'chown', 'sudo', file modes |
-- |*3*| Searching the system *(COMING 07/02/2026)* | Find hidden files and analyze logs | 'grep', 'find', 'less', 'head', 'tail' |
+- |*3*| Searching the system | Find hidden files and analyze logs | 'grep', 'find', 'less', 'head', 'tail' |
 - |*4*| Networking Challenge *(COMING 14/02/2026)* | Discover hosts and services | 'ping', 'netcat', 'curl', 'ssh' |
 - |*5*| Cryptography & Decoding *(COMING 21/02/2026)* | Decode hidden messages and hash files | base64, hashing, simple ciphers |
 
