@@ -23,8 +23,8 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 - |*1*| Intro Challenge | Explore directories and find hidden files | Basic Linux commands ('ls', 'cat', 'cd', 'pwd', 'whoami') |
 - |*2*| Permissions & Ownership | Learn how to view and modify file permissions | 'chmod', 'chown', 'sudo', file modes |
 - |*3*| Searching the system | Find hidden files and analyze logs | 'grep', 'find', 'less', 'head', 'tail' |
-- |*4*| Networking Challenge *(COMING 14/02/2026)* | Discover hosts and services | 'ping', 'netcat', 'curl', 'ssh' |
-- |*5*| Cryptography & Decoding *(COMING 21/02/2026)* | Decode hidden messages and hash files | base64, hashing, simple ciphers |
+- |*4*| Networking Challenge *COMING MARCH* | Discover hosts and services | 'ping', 'netcat', 'curl', 'ssh' |
+- |*5*| Cryptography & Decoding *COMING APRIL* | Decode hidden messages and hash files | base64, hashing, simple ciphers |
 
 ### 🪟 Windows Terminal Levels:
 - |*1*| Intro challenge | Navigate folders and uncover hidden files | Basic Window commands ('dir', 'cd', 'type', 'cls', 'echo') |
