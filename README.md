@@ -18,25 +18,24 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 ## Levels Overview
 
 ---
-
 ### 🐧 Linux Terminal Levels:
-- |*1*| Intro Challenge | Explore directories and find hidden files | Basic Linux commands (`ls`, `cat`, `cd`, `pwd`, `whoami`) |
-- |*2*| Permissions & Ownership | Learn how to view and modify file permissions | `chmod`, `chown`, `sudo`, file modes |
-- |*3*| Searching the system | Find hidden files and analyze logs | `grep`, `find`, `less`, `head`, `tail` |
-- |*4*| Networking Challenge *COMING MARCH* | Discover hosts and services | `ping`, `netcat`, `curl`, `ssh` |
-- |*5*| Cryptography & Decoding *COMING APRIL* | Decode hidden messages and hash files | `base64`, `hashing`, `simple ciphers` |
+1. **Intro Challenge**: `UNDER REDESIGN`Explore directories and find hidden files | Basic Linux commands `ls`, `cat`, `cd`, `pwd`, `whoami`
+2. **Permissions & Ownership**: `UNDER REDESIGN`Learn how to view and modify file permissions | `chmod`, `chown`, `sudo`, `file modes`
+3. **Searching the system**: `UNDER REDESIGN`Find hidden files and analyze logs | `grep`, `find`, `less`, `head`, `tail`
+4. **Networking Challenge**: `COMING MARCH` Discover hosts and services | `ping`, `netcat`, `curl`, `ssh`
+5. **Cryptography & Decoding**: `COMING APRIL` Decode hidden messages and hash files | `base64`, `hashing`, `simple ciphers`
 
 ### 🪟 Windows Terminal Levels:
-- |*1*| Intro challenge | Navigate folders and uncover hidden files | Basic Window commands (`dir`, `cd`, `type`, `cls`, `echo`) |
-- |*2*| Permissions & Ownership | View and edit file rights | `icals`, `attrib`, `takeown` |
-- |*3*| Searching the System | Hunt for hiden files and read logs | `findstr`, `where`, `tree` |
-- |*4*| Networking Challenge | Scan the network and check services | `ping`, `tracert`, `netstat`, `curl`, `ipconfig` |
-- |*5*| Cryptography & Decoding | Decode messages and inspect hashes | `base64`, `certutil`, `simple ciphers` |
-- |*6*| Registry Deep Dive | Navigate the Windows Registry to find hidden configuration keys |
-- |*7*| Task Scheduler & Services | Investigate scheduled tasks and services to find malicious activity |
-- |*8*| Event Log Forensics | Analyze Windows Event Logs to trace security incidents |
-- |*9*| Disk Forensics & File Recovery | Recover deleted files and analyze disk partitions |
-- |*10*| PowerShell Scripting Challenge | Use PowerShell to automate tasks and solve complex problems |
+1. **Intro challenge**: Navigate folders and uncover hidden files | Basic Window commands `dir`, `cd`, `type`, `cls`, `echo`
+2. **Permissions & Ownership**: View and edit file rights | `icals`, `attrib`, `takeown`
+3. **Searching the System**: Hunt for hiden files and read logs | `findstr`, `where`, `tree`
+4. **Networking Challenge**: Scan the network and check services | `ping`, `tracert`, `netstat`, `curl`, `ipconfig`
+5. **Cryptography & Decoding**: Decode messages and inspect hashes | `base64`, `certutil`, `simple ciphers`
+6. **Registry Deep Dive**: Navigate the Windows Registry to find hidden configuration keys
+7. **Task Scheduler & Services**: Investigate scheduled tasks and services to find malicious activity
+8. **Event Log Forensics**: Analyze Windows Event Logs to trace security incidents
+9. **Disk Forensics & File Recovery**: Recover deleted files and analyze disk partitions
+10. **PowerShell Scripting Challenge**: Use PowerShell to automate tasks and solve complex problems
 ## Installation & Setup 
 
 ----
