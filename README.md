@@ -35,8 +35,8 @@ A containersized command-line cybersecurity challenge built in Python, simulatin
 - |*6*| Registry Deep Dive | Navigate the Windows Registry to find hidden configuration keys |
 - |*7*| Task Scheduler & Services | Investigate scheduled tasks and services to find malicious activity |
 - |*8*| Event Log Forensics | Analyze Windows Event Logs to trace security incidents |
-- |*9*| Disk Forensics & File Recovery | Recover deleted files and analyze disk partitions (COMING SOON)...
-- |*10*| PowerShell Scripting Challenge | Use PowerShell to automate tasks and solve complex problems (COMING SOON)...
+- |*9*| Disk Forensics & File Recovery | Recover deleted files and analyze disk partitions |
+- |*10*| PowerShell Scripting Challenge | Use PowerShell to automate tasks and solve complex problems |
 ## Installation & Setup 
 
 ----
