@@ -1,64 +1,109 @@
 import time
 from .utils import (
-    clear_screen,
     print_header,
     print_objectives,
     print_success,
     generic_cmd_handler,
     CURRENT_DIR,
+    print_windows_motd,
+    build_prompt,
 )
 
 
 def run_level():
-    title = "LEVEL 1: FILE SYSTEM RECON"
+    title = "LEVEL 1: INTRO CHALLENGE"
     objectives = [
-        "List files in the current directory.",
-        "Read 'notes.txt' to find credentials."
+        "Navigate folders to uncover a hidden file.",
+        "Read the hidden file to extract credentials."
     ]
-    hint = "Use 'dir' to look around and 'type [filename]' to read."
-    
+    hint = "Use 'dir', 'dir /a', and 'cd' to explore. Read files with 'type'."
+
     print_header(title)
     print_objectives(objectives, hint)
+    print_windows_motd()
+
+    current_dir = CURRENT_DIR
+    hidden_revealed = False
+
+    def list_dir(show_hidden=False):
+        nonlocal hidden_revealed
+        print(f" Directory of {current_dir}\n")
+        if current_dir == CURRENT_DIR:
+            print("02/20/2026  09:10 AM    <DIR>          .")
+            print("02/20/2026  09:10 AM    <DIR>          ..")
+            print("02/20/2026  08:55 AM    <DIR>          Intel")
+            print("02/20/2026  08:55 AM    <DIR>          Public")
+            print("02/20/2026  08:40 AM               256 readme.txt")
+        elif current_dir == f"{CURRENT_DIR}\\Intel":
+            print("02/20/2026  08:30 AM               512 brief.txt")
+            if show_hidden:
+                hidden_revealed = True
+                print("02/20/2026  08:31 AM               384 notes.txt")
+        elif current_dir == f"{CURRENT_DIR}\\Public":
+            print("02/20/2026  08:20 AM               128 welcome.txt")
+        print()
 
     while True:
         try:
-            prompt = f"{CURRENT_DIR}> "
-            user_input = input(prompt).strip().lower()
+            user_input = input(build_prompt(current_dir)).strip()
             parts = user_input.split()
-            cmd = parts[0] if parts else ""
-            arg = parts[1] if len(parts) > 1 else ""
+            cmd = parts[0].lower() if parts else ""
+            args = parts[1:]
+            arg_str = " ".join(args)
 
-            common = generic_cmd_handler(cmd, arg)
-            if common == "EXIT": return False
-            if common: continue
+            common = generic_cmd_handler(cmd, arg_str)
+            if common == "EXIT":
+                return False
+            if common:
+                continue
 
-            if cmd == "dir" or cmd == "ls":
-                print(f" Directory of {CURRENT_DIR}")
-                print()
-                print("11/10/2025  07:42 AM    <DIR>          .")
-                print("11/10/2025  07:42 AM    <DIR>          ..")
-                print("11/10/2025  07:30 AM             1,024 secret.txt")
-                print("11/10/2025  07:25 AM               512 notes.txt")
-                print("               2 File(s)          1,536 bytes")
-                print("               2 Dir(s)   12,345,678,901 bytes free")
-            
-            elif cmd == "type" or cmd == "cat":
-                if arg == "secret.txt":
-                    print("Access Denied: You do not have permission to view this file.")
-                elif arg == "notes.txt":
-                    print("\nSystem Administrator Notes:")
-                    print("-" * 25)
-                    print("Username: admin_root")
-                    print("Temporary password: Winter2025!")
-                    print("Remote server IP: 192.168.1.105")
-                    print("-" * 25)
-                    time.sleep(1)
-                    print_success("Credentials & IP Found! Level 1 Complete.")
-                    return True
+            if cmd in ["dir", "ls"]:
+                show_hidden = any(a.lower() in ["/a", "/ah", "-a"] for a in args)
+                list_dir(show_hidden=show_hidden)
+            elif cmd == "cd":
+                if not args:
+                    print(current_dir)
+                elif args[0] == "..":
+                    current_dir = CURRENT_DIR
+                elif args[0].lower() == "intel":
+                    current_dir = f"{CURRENT_DIR}\\Intel"
+                elif args[0].lower() == "public":
+                    current_dir = f"{CURRENT_DIR}\\Public"
                 else:
-                    print(f"The system cannot find the file specified: {arg}")
+                    print("The system cannot find the path specified.")
+            elif cmd in ["type", "cat"]:
+                target = args[0].lower() if args else ""
+                if current_dir == CURRENT_DIR and target == "readme.txt":
+                    print("Welcome agent. Explore the Intel folder for operational notes.")
+                elif current_dir == f"{CURRENT_DIR}\\Intel" and target == "brief.txt":
+                    print("Brief: Locate hidden notes and extract credentials.")
+                elif current_dir == f"{CURRENT_DIR}\\Intel" and target == "notes.txt":
+                    if hidden_revealed:
+                        print("\n[NOTES.TXT]")
+                        print("-" * 30)
+                        print("Username: admin_root")
+                        print("Temp Password: Winter2026!")
+                        print("Next: Use proper ownership tools to access locked files.")
+                        print("-" * 30)
+                        time.sleep(1)
+                        print_success("Hidden file recovered. Level 1 Complete.")
+                        return True
+                    else:
+                        print("Access Denied: File is hidden.")
+                elif current_dir == f"{CURRENT_DIR}\\Public" and target == "welcome.txt":
+                    print("Welcome. Nothing sensitive here.")
+                else:
+                    print("The system cannot find the file specified.")
             else:
-                print(f"'{cmd}' is not recognized.")
+                print(f"'{user_input}' is not recognized.")
 
         except KeyboardInterrupt:
             return False
+
+
+def main():
+    return run_level()
+
+
+if __name__ == "__main__":
+    main()
